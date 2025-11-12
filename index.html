@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Singh Tour and Travel Agency — Curated Luxury Tours</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ST</div>
+        <div class="brand-text">
+          <h1>Singh Tour and Travel Agency</h1>
+          <p class="tag">Curated luxury & unforgettable journeys</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1596277699586-fd374a2efbbc?auto=format&fit=crop&w=1400&q=80" alt="Patratu Valley Hills">
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h2>Travel in style. Experience the extraordinary.</h2>
+          <p>Personalised luxury tours, expert guides, and seamless planning — from Ranchi to the world.</p>
+          <div class="hero-cta">
+            <a href="#packages" class="btn-primary">Explore Packages</a>
+            <a href="#contact" class="btn-secondary">Get a Quote</a>
+          </div>
+          <ul class="hero-features">
+            <li>Private transfers</li>
+            <li>Handpicked stays</li>
+            <li>Local luxury experiences</li>
+          </ul>
+        </div>
+        <div class="hero-right" aria-hidden="true">
+          <div class="card-glass">
+            <div class="accent">Premium</div>
+            <h3>Ranchi — Bespoke Day Trips</h3>
+            <p>Curated routes, gourmet meals and VIP access.</p>
+            <div class="price">Starting ₹4,999</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h3>About Us</h3>
+        <p class="lead">Singh Tour and Travel Agency is a boutique tour agency based in Ranchi (Katalmore). We design personalised journeys that blend comfort, culture and luxury. Whether it's a weekend escape or a multi-day curated tour, we handle everything — so you can unwind.</p>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h3>Our Services</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Luxury Accommodation</h4>
+            <p>Handpicked premium hotels & villas with exceptional service.</p>
+          </div>
+          <div class="card">
+            <h4>Private Transfers</h4>
+            <p>Comfortable vehicles with professional chauffeurs.</p>
+          </div>
+          <div class="card">
+            <h4>Exclusive Experiences</h4>
+            <p>Local guides, private tastings and cultural access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <div class="container">
+        <h3>Featured Packages</h3>
+        <div class="package-grid">
+          <article class="package">
+            <img src="https://images.unsplash.com/photo-1596277699586-fd374a2efbbc?auto=format&fit=crop&w=600&q=60" alt="Hills">
+            <h4>Heritage & Hills — 3 Days</h4>
+            <p>Explore serene hills and cultural heritage sites with curated stays.</p>
+            <div class="meta">Includes transfers & breakfast</div>
+            <div class="price">₹9,999</div>
+          </article>
+          <article class="package">
+            <img src="https://images.unsplash.com/photo-1596033414147-7b98f7f16c9d?auto=format&fit=crop&w=600&q=60" alt="Waterfall">
+            <h4>Luxury Weekend — 2 Days</h4>
+            <p>Short, indulgent escapes with gourmet dining.</p>
+            <div class="meta">Flexible dates</div>
+            <div class="price">₹6,499</div>
+          </article>
+          <article class="package">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=60" alt="Netarhat">
+            <h4>Custom Journeys</h4>
+            <p>Build-your-own itinerary with a dedicated travel designer.</p>
+            <div class="meta">Starts from</div>
+            <div class="price">Ask for quote</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h3>Contact Us</h3>
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+            <label>Full name<input type="text" id="name" required></label>
+            <label>Email<input type="email" id="email" required></label>
+            <label>Phone<input type="tel" id="phone" pattern='[0-9\s+-]+'></label>
+            <label>Message<textarea id="message" rows="4"></textarea></label>
+            <button class="btn-primary" type="submit">Send Message</button>
+          </form>
+          <div class="contact-info">
+            <h4>Singh Tour and Travel Agency</h4>
+            <p>Location: Ranchi, Katalmore</p>
+            <p>Phone: <a href="tel:+919241636975">+91 92416 36975</a></p>
+            <p>Email: <a href="mailto:ankit68061@gmail.com">ankit68061@gmail.com</a></p>
+            <div class="small">We aim to reply within 24 hours.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Singh Tour and Travel Agency</div>
+      <div class="socials">Designed with ♥ — Singh Agency</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
