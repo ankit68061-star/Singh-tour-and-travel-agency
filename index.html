@@ -1,4 +1,70 @@
+import zipfile
+import os
+
+# File structure
+files = {
+    'index.html': """
 <!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Singh Tour and Travel Agency</title>
+<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+<header>
+<h1>Singh Tour and Travel Agency</h1>
+<p>Explore the beauty of Ranchi and beyond!</p>
+</header>
+<main>
+<section>
+<h2>Our Tours</h2>
+<p>Check out our special packages for hills, mountains, and city tours.</p>
+<img src='images/ranchi.jpg' alt='Ranchi Mountains'>
+</section>
+<section>
+<h2>Contact Us</h2>
+<p>Email: ankit68061@gmail.com</p>
+<p>Phone: 9241636975</p>
+<p>Location: Ranchi Katalmore Jharkhand </p>
+</section>
+</main>
+<script src='script.js'></script>
+</body>
+</html>
+""",
+
+    'style.css': """
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
+header { background: #0066cc; color: white; text-align: center; padding: 2rem; }
+main { padding: 2rem; }
+section { margin-bottom: 2rem; }
+img { max-width: 100%; height: auto; border-radius: 10px; }
+""",
+
+    'script.js': """
+console.log('Singh Tour and Travel Agency Website Loaded');
+"""
+}
+
+# Create images folder and add placeholder image
+os.makedirs('images', exist_ok=True)
+with open('images/ranchi.jpg', 'wb') as f:
+    f.write(b'')  # Placeholder empty file, can be replaced with actual image
+
+# Create zip file
+with zipfile.ZipFile('Singh_Agency_Website.zip', 'w') as zipf:
+    for file_name, content in files.items():
+        with open(file_name, 'w', encoding='utf-8') as f:
+            f.write(content)
+        zipf.write(file_name)
+    for root, dirs, files_in_dir in os.walk('images'):
+        for file_in_dir in files_in_dir:
+            zipf.write(os.path.join(root, file_in_dir))
+
+print('Singh_Agency_Website.zip created successfully!')
+ html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
